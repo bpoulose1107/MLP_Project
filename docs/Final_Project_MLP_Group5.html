@@ -15133,6 +15133,20 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
+<div id="cell-id=7f4aaaac" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Consumer-Complaints-Financial-Products-Dataset">Consumer Complaints Financial Products Dataset<a class="anchor-link" href="#Consumer-Complaints-Financial-Products-Dataset">&#182;</a></h3><p>This dataset, available on Kaggle, contains over 600,000 consumer complaints submitted to the <strong>Consumer Financial Protection Bureau (CFPB)</strong> regarding various financial products and services such as credit cards, loans, mortgages, and bank accounts.</p>
+<p>It is useful for Natural Language Processing (NLP) tasks like <strong>sentiment analysis</strong>, <strong>text classification</strong>, and <strong>topic modeling</strong>, making it an excellent resource for real-world text mining applications in the financial sector.</p>
+<p><a href="https://www.kaggle.com/datasets/ashwinik/consumer-complaints-financial-products">View Dataset on Kaggle</a></p>
+
+</div>
+</div>
+</div>
+</div>
 <div id="cell-id=ddff0282" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15448,14 +15462,12 @@ Requirement already satisfied: mdurl~=0.1 in c:\bismi\course\ai\fundamental_ml\g
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Step_1_load_and_inspect.py</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-<span class="c1"># Load your file</span>
+<span class="c1"># Loading file</span>
 <span class="n">file_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:/BISMI/COURSE/AI/Machine_Learning_Programming/Final_Project/dataset/Consumer_Complaints.csv&quot;</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
 
@@ -15567,7 +15579,6 @@ Name: text_length, dtype: float64
 <li><strong>Lemmatizing</strong> words using <code>WordNetLemmatizer</code> to convert to base form (e.g., <em>running</em> → <em>run</em>).</li>
 </ul>
 <p>We apply this cleaning to the first 60,000 rows of the dataset (to reduce memory usage and time), then save the final result into a cleaned CSV file.</p>
-<p>This cleaned dataset is now ready for <strong>sentiment analysis</strong>, <strong>feature extraction</strong>, and <strong>model training</strong> in the next steps.</p>
 
 </div>
 </div>
@@ -15721,6 +15732,18 @@ C:/BISMI/COURSE/AI/Machine_Learning_Programming/Final_Project/dataset/final_clea
 </div>
 
 </div>
+<div id="cell-id=35322a2e" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>This cleaned dataset is now ready for <strong>sentiment analysis</strong>, <strong>feature extraction</strong>, and <strong>model training</strong> in the next steps.</p>
+
+</div>
+</div>
+</div>
+</div>
 <div id="cell-id=2924a80f" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15744,7 +15767,6 @@ C:/BISMI/COURSE/AI/Machine_Learning_Programming/Final_Project/dataset/final_clea
 <li><strong>Negative</strong> if polarity &lt; 0</li>
 <li><strong>Neutral</strong> if polarity = 0</li>
 </ul>
-<p>We apply the function to all records, generate sentiment labels, and save the result to a new CSV file for further analysis.</p>
 
 </div>
 </div>
@@ -15754,13 +15776,13 @@ C:/BISMI/COURSE/AI/Machine_Learning_Programming/Final_Project/dataset/final_clea
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">textblob</span><span class="w"> </span><span class="kn">import</span> <span class="n">TextBlob</span>
 
-<span class="c1"># Load your cleaned dataset</span>
+<span class="c1"># Loading cleaned dataset</span>
 <span class="n">file_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:/BISMI/COURSE/AI/Machine_Learning_Programming/Final_Project/dataset/final_cleaned_60000.csv&quot;</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
 
@@ -16138,7 +16160,6 @@ class="
 </ul>
 <h4 id="Why-LinearSVC?">Why LinearSVC?<a class="anchor-link" href="#Why-LinearSVC?">&#182;</a></h4><p>LinearSVC is efficient for high-dimensional, sparse feature spaces like text data. It's commonly used in text classification tasks and performs well when combined with TF-IDF.</p>
 <h4 id="Model-Performance:">Model Performance:<a class="anchor-link" href="#Model-Performance:">&#182;</a></h4><p>The model showed <strong>high accuracy (~92%)</strong>, indicating strong predictive capability for classifying sentiment based on TF-IDF features.</p>
-<p>This model performed better than Bag-of-Words and even deep learning models (e.g., LSTM + Word2Vec), showing the effectiveness of traditional ML pipelines when the data is well-preprocessed.</p>
 
 </div>
 </div>
@@ -16245,7 +16266,7 @@ Accuracy: 0.9210833333333334
 <li>Evaluated model performance using <strong>classification report</strong> and <strong>accuracy score</strong>.</li>
 </ul>
 <h4 id="Why-Naive-Bayes?">Why Naive Bayes?<a class="anchor-link" href="#Why-Naive-Bayes?">&#182;</a></h4><p>Multinomial Naive Bayes is often used for text classification problems, especially when feature vectors represent word frequencies. It's simple, fast, and performs decently for baseline sentiment analysis tasks.</p>
-<h4 id="Model-Performance:">Model Performance:<a class="anchor-link" href="#Model-Performance:">&#182;</a></h4><p>While this model is computationally efficient, it achieved an accuracy of only around <strong>68%</strong>, which is lower than TF-IDF and deep learning approaches. This shows that while BoW + Naive Bayes can provide a quick baseline, it may not capture contextual information effectively.</p>
+<h4 id="Model-Performance:">Model Performance:<a class="anchor-link" href="#Model-Performance:">&#182;</a></h4><p>While this model is computationally efficient, it achieved an accuracy of only around <strong>68%</strong>.</p>
 
 </div>
 </div>
@@ -16630,12 +16651,12 @@ Accuracy (LSTM): 0.7830833333333334
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
-<span class="c1"># Example accuracy values from your models</span>
+<span class="c1"># Example accuracy values from models</span>
 <span class="n">accuracies</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;TF-IDF + Logistic Regression&#39;</span><span class="p">:</span> <span class="mf">0.92</span><span class="p">,</span>
     <span class="s1">&#39;BoW + Logistic Regression&#39;</span><span class="p">:</span> <span class="mf">0.68</span><span class="p">,</span>
@@ -16856,7 +16877,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
@@ -16873,7 +16894,7 @@ class="
 <span class="c1"># Simple cleaner using the same tokenizer and padding</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">preprocess_demo</span><span class="p">(</span><span class="n">reviews</span><span class="p">):</span>
     <span class="n">cleaned_reviews</span> <span class="o">=</span> <span class="p">[</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[^a-zA-Z\s]&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">reviews</span><span class="p">]</span>
-    <span class="n">sequences</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">texts_to_sequences</span><span class="p">(</span><span class="n">cleaned_reviews</span><span class="p">)</span>  <span class="c1"># Use your trained tokenizer</span>
+    <span class="n">sequences</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">texts_to_sequences</span><span class="p">(</span><span class="n">cleaned_reviews</span><span class="p">)</span> 
     <span class="k">return</span> <span class="n">pad_sequences</span><span class="p">(</span><span class="n">sequences</span><span class="p">,</span> <span class="n">maxlen</span><span class="o">=</span><span class="n">maxlen</span><span class="p">)</span>
 
 <span class="c1"># Prepare input</span>
